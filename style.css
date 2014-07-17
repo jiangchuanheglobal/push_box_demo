@@ -18,3 +18,33 @@ h1 {
   width: 600px;
   margin: 0 auto; 
 }
+
+.game-container {
+  margin-top: 50px;
+  position: relative;
+  padding: 0px;
+  background: #b8be2f;
+  border-radius: 2px;
+  width: 500px;
+  height: 500px;
+  box-sizing: border-box; 
+}
+
+.grid-container {
+ position: absolute;
+ z-index: 1;
+}
+
+.even_grid-cell {
+	width: 125px;
+	height: 125px;
+	float: left;
+	background: #9ea400;
+}
+.odd_grid-cell {
+	width: 125px;
+	height: 125px;
+	float: left;
+	background: #b8be2f;
+}
+
