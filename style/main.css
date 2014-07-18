@@ -5,13 +5,33 @@ html, body{
 	font-family: "Clear Sans", "Helvetica Neue"  ;
 	background: #ffd373;
 	color: #442b83;
+	font-size: 18px;
 }
 
+body {
+	margin: 80px 0;
+}
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold; 
+	margin: 0;
 //	background: #f3fd00;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.65;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+strong.important {
+	text-transform: uppercase;
 }
 
 .container {
@@ -20,7 +40,7 @@ h1 {
 }
 
 .game-container {
-  margin-top: 50px;
+  margin-top: 30px;
   position: relative;
   padding: 0px;
   background: #b8be2f;
@@ -48,3 +68,30 @@ h1 {
 	background: #b8be2f;
 }
 
+.box-container {
+	position: absolute;
+	z-index: 2;
+}
+
+.box {
+	margin-top:12.5px;
+	margin-left:12.5px;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	background: #6f47d7;
+}
+
+.box.box-position-1-1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.game-intro {
+	margin-bottom: 0;
+}
+
+.game-explanation {
+	margin-top: 50px;
+}
