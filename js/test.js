@@ -10,6 +10,7 @@ function Box(position) {
 	this.listen();
 }
 
+
 Box.prototype.move = function(direction) {
 	// 0: left
 	// 1: right
@@ -64,6 +65,7 @@ Box.prototype.listen = function() {
 
 		var dir = map[event.which];
 		if (dir !== undefined) {
+			event.preventDefault();
 			self.move(dir);
 		}
 	}); 
