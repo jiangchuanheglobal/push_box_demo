@@ -57,6 +57,16 @@ Game.prototype.update = function(dir) {
 };
 
 Game.prototype.win = function() {
+	var i;
+	for (i = 0; i < this.cross.length; i++) {
+		var pos = this.cross[i];
+		if (this.map[pos.x][pos.y] !== 1) {
+			break;
+		}
+	}
+	if (i == this.cross.length) {
+		return true;
+	}
 	return false;		
 }
 Game.prototype.listen = function() {
@@ -74,6 +84,7 @@ Game.prototype.listen = function() {
 			event.preventDefault();
 			self.update(dir);
 			if (self.win()) {
+				alert("win");
 			}
 		}
 	}); 
@@ -84,6 +95,7 @@ function Game(size) {
 	this.map = new Array(size);
 	this.x = 2;
 	this.y = 2;
+	this.cross = [];
 	this.buildMap();
 	this.listen();
 }
@@ -165,7 +177,10 @@ Game.prototype.buildMap = function() {
 			}
 		}
 	}
-
+	this.cross.push({x:0, y:2});
+	this.cross.push({x:2, y:0});
+	this.cross.push({x:2, y:4});
+	this.cross.push({x:4, y:2});
 };
 
 Game.prototype.printMap = function() {

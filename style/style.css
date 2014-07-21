@@ -1,0 +1,151 @@
+@import url(fonts/clear-sans.css);
+html, body {
+  margin: 0;
+	padding: 0;
+	font-family: "Clear Sans", "Helvetica Neue" , Arial, sans-serif;
+	background: #faf8ef;
+	color: #776e65;
+	font-size: 18px; }
+
+body {
+	margin: 80px 0; }
+
+.heading:after {
+	content: "";
+	display: block;
+	clear: both; }
+
+h1.title {
+  font-size: 40px;
+  font-weight: bold; 
+	margin: 0;
+	display: block;
+	float: left;
+}
+
+.steps-container {
+  position: relative;
+  float: right;
+  background: #bbada0;
+  padding: 15px 30px;
+  font-size: 25px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px; 
+}
+
+.steps-container:after {
+	position: absolute;
+	width: 100%;
+	top: 10px;
+	left: 0;
+	content: "Score";
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 13px;
+	text-align: center;
+	color: #eee4da; 
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 1.65;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+strong.important {
+	text-transform: uppercase;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto; 
+}
+
+.game-container {
+  margin-top: 30px;
+  position: relative;
+  padding: 0px;
+	cursor: default;
+  background: #b8be2f;
+  border-radius: 2px;
+  width: 500px;
+  height: 500px;
+  box-sizing: border-box; 
+}
+
+.grid-container {
+ position: absolute;
+ z-index: 1;
+}
+
+.even_grid-cell {
+	width: 100px;
+	height: 100px;
+	float: left;
+	background: #9ea400;
+}
+.odd_grid-cell {
+	width: 100px;
+	height: 100px;
+	float: left;
+	background: #b8be2f;
+}
+
+.box-container {
+	position: absolute;
+	z-index: 2;
+}
+
+.brick {
+	position: absolute;
+	margin-top:10px;
+	margin-left:10px;
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	background: #6f47d7;
+}
+
+.box {
+	position: absolute;
+	margin-top:10px;
+	margin-left:10px;
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	background: #512cf2;
+	
+}
+
+.porter {
+	position: absolute;
+	margin-top:25px;
+	margin-left:25px;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	background: #430e55;
+	
+}
+.game-intro {
+	margin-bottom: 0;
+}
+
+.game-explanation {
+	margin-top: 50px;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid #d8d4d0;
+  margin-top: 20px;
+  margin-bottom: 30px; 
+}
