@@ -53,9 +53,15 @@ Game.prototype.update = function(dir) {
 		this.map[nextPos.x][nextPos.y] = 3;
 		this.x = nextPos.x;
 		this.y = nextPos.y;
+		++this.steps;
+		this.updateSteps(this.steps);
 	}
 };
 
+Game.prototype.updateSteps = function(steps) {
+	var steps_elem = document.getElementsByClassName("steps-container")[0];
+	steps_elem.innerHTML = steps.toString();
+};
 Game.prototype.win = function() {
 	var i;
 	for (i = 0; i < this.cross.length; i++) {
@@ -93,9 +99,14 @@ Game.prototype.listen = function() {
 function Game(size) {
 	this.size = size;
 	this.map = new Array(size);
+	// porter pos
 	this.x = 2;
 	this.y = 2;
+
+	this.steps = 0;
+	//cross hole pos
 	this.cross = [];
+
 	this.buildMap();
 	this.listen();
 }
