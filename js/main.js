@@ -60,7 +60,7 @@ Game.prototype.update = function(dir) {
 
 Game.prototype.updateSteps = function(steps) {
 	var steps_elem = document.getElementsByClassName("steps-container")[0];
-	steps_elem.innerHTML = steps.toString();
+	steps_elem.textContent = steps.toString();
 };
 Game.prototype.win = function() {
 	var i;

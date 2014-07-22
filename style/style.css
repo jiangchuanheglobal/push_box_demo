@@ -29,12 +29,13 @@ h1.title {
   background: #4f2b83;
   padding: 15px 30px;
   font-size: 25px;
-  height: 25px;
   line-height: 47px;
+	text-align: center;
   font-weight: bold;
   border-radius: 3px;
   color: white;
   margin-top: 8px; 
+  height: 25px;
 }
 
 .steps-container:after {
