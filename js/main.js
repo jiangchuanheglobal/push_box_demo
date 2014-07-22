@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var game = new Game(5);
 });
 
-
 Game.prototype.update = function(dir) {
 	var nextPos = {x:this.x, y:this.y};
 	var nextNextPos = {x:this.x, y:this.y};
@@ -80,9 +79,9 @@ Game.prototype.listen = function() {
 	document.addEventListener("keydown", function(event) {
 		var map = {
 			37: 0,  // Left
-			39: 1, // Right
-			38: 2, // Up
-			40: 3, // Down
+		39: 1, // Right
+		38: 2, // Up
+		40: 3, // Down
 		};	
 
 		var dir = map[event.which];
@@ -90,7 +89,7 @@ Game.prototype.listen = function() {
 			event.preventDefault();
 			self.update(dir);
 			if (self.win()) {
-				alert("win");
+				alert("win!");
 			}
 		}
 	}); 
@@ -125,6 +124,7 @@ Game.prototype.add = function(position, type) {
 		elem.classList.add("box");
 	}
 	else if (type == 2) {
+		elem.classList.add("cross");
 	}
 	else {
 		// porter
@@ -162,7 +162,7 @@ Game.prototype.buildMap = function() {
 	this.map[2][4] = 2;
 	this.map[4][2] = 2;
 	this.map[2][0] = 2;
-	
+
 	this.map[2][1] = 1;
 	this.map[1][2] = 1;
 	this.map[3][2] = 1;
@@ -181,6 +181,7 @@ Game.prototype.buildMap = function() {
 				this.add({x:i, y:j}, 1);
 			}
 			else if (val == 2) {
+				this.add({x:i, y:j}, 2);
 			}
 			else {
 				// porter

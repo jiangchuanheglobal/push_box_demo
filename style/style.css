@@ -113,15 +113,24 @@ strong.important {
 	background-image: url('../images/brick.jpg');
 }
 
+.cross {
+	position: absolute;
+	background: #230e55;
+	width: 20px;
+	height: 20px;
+	margin-top: 40px;
+	margin-left: 40px;
+	border-radius: 50%;
+}
+
 .box {
 	position: absolute;
 	margin-top:10px;
 	margin-left:10px;
 	width: 80px;
 	height: 80px;
-	border-radius: 10px;
-	background: #512cf2;
-	
+  background-size: 100%;
+	background-image: url('../images/box.png');
 }
 
 .porter {
